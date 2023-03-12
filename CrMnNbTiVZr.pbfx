@@ -1,0 +1,86 @@
+<pbfx version="1.0"  encoding="utf-8">
+	<Header copyright="CompuTherm, LLC">
+		<!-- this file defines the syntax for a batch calculation -->
+		<Application name="Pandat" version="2022" />
+	</Header>
+
+	<calculation name="Point Calculation_CrMnNbTiVZr" type="point">
+
+		<databases>
+			<database type="pdb" file_name="PanRHEA2022a_TH+MB.pdb"/>
+		</databases>
+
+		<units>
+			<unit name="P" value="bar"/>
+			<unit name="T" value="C"/>
+			<unit name="n" value="x%"/>
+		</units>
+
+		<system name="Default_System">
+			<components>
+				<component name="Cr" status="Selected"/>
+				<component name="Mn" status="Selected"/>
+				<component name="Nb" status="Selected"/>
+				<component name="Ti" status="Selected"/>
+				<component name="V" status="Selected"/>
+				<component name="Zr" status="Selected"/>
+			</components>
+
+			<phases>
+				<phase name="*" status="Entered" />
+			</phases>
+
+			<points>
+				<point>
+					<statespace>
+						<T value="1000"/>
+						<P value="1"/>
+						<n component="Cr" value="100"/>
+						<n component="Mn" value="0"/>
+						<n component="Nb" value="0"/>
+						<n component="Ti" value="0"/>
+						<n component="V" value="0"/>
+						<n component="Zr" value="0"/>
+					</statespace>
+				</point>
+			</points>
+
+			<condition>
+				<equilibrium_type type="global"/>
+				<driving_force value="true"/>
+			</condition>
+
+		</system>
+
+		<output unit="">
+			<tables>
+				<table name="Default" source="Default" type="Default">
+					<column name="T"/>
+					<column name="P"/>
+					<column name="log10(P)"/>
+					<column name="phase_name"/>
+					<column name="x(*)"/>
+					<column name="w(*)"/>
+					<column name="G"/>
+					<column name="H"/>
+					<column name="S"/>
+					<column name="f(@*)"/>
+					<column name="x(*@*)"/>
+					<column name="w(*@*)"/>
+					<column name="G(@*)"/>
+					<column name="H(@*)"/>
+					<column name="S(@*)"/>
+				</table>
+			</tables>
+
+			<graphs>
+				<graph name="Default">
+				</graph>
+			</graphs>
+
+		</output>
+
+	</calculation>
+
+</pbfx>
+

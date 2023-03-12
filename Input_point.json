@@ -1,0 +1,41 @@
+{
+  "Units": {
+    "n": "x%",
+    "T": "C"
+  },
+  "T": {
+    "start": 1200,
+    "end": 1200,
+    "step size": 100
+  },
+  "Cr": {
+    "start": 0,
+    "end": 100,
+    "step size": -1
+  },
+  "Mn": {
+    "start": 0,
+    "end": 100,
+    "step size": 10
+  },
+  "Nb": {
+    "start": 0,
+    "end": 100,
+    "step size": 10
+  },
+  "Ti": {
+    "start": 0,
+    "end": 100,
+    "step size": 10
+  },
+  "V": {
+    "start": 0,
+    "end": 100,
+    "step size": 10
+  },
+  "Zr": {
+    "start": 0,
+    "end": 100,
+    "step size": 10
+  }
+}
